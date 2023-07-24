@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PersonalCard</string>
+    <string name="content_description_image1">A logo that represents the job, in this example android logo</string>
+    <string name="phone_number">Phone number</string>
+    <string name="social_medias">social medias</string>
+    <string name="email">Email</string>
+</resources>
