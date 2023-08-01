@@ -50,7 +50,6 @@ class TipCalculatorTests {
         log.info("calculate_15_percent_tip_no_round_up >>> expected is equals to \t\t$expected")
 
         assertEquals(expected, tip)
-
     }
 
     @Test
