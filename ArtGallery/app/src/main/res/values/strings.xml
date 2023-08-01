@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ArtGallery</string>
+    <string name="photo_1_artwork_name">A Mesa</string>
+    <string name="photo_2_artwork_name">A Fogueira</string>
+    <string name="photo_3_artwork_name">Os dois</string>
+    <string name="photo_4_artwork_name">Vó e neto</string>
+    <string name="artist_name">Felipe Alafy</string>
+    <string name="artwork_year">2023</string>
+    <string name="photo_1_content_description">A table filled with various diferents specific foods of festa junina.</string>
+    <string name="photo_2_content_description">A camping fire</string>
+    <string name="photo_3_content_description">Two people wering specific dresses for festa junina</string>
+    <string name="photo_4_content_description">A grandson and his grandmother</string>
+</resources>
