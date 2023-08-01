@@ -3,6 +3,7 @@ package com.github.felipealafy.learningcomposer.composestate
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.annotation.VisibleForTesting
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -163,7 +164,8 @@ fun TipTimeScreenPreview() {
     }
 }
 
-private fun Double.calculateTip(TipPercentage: Double = 15.0, ShouldRoundUp: Boolean): String {
+@VisibleForTesting
+internal fun Double.calculateTip(TipPercentage: Double = 15.0, ShouldRoundUp: Boolean): String {
     val tip = TipPercentage / 100 * this
     return if (ShouldRoundUp) {
         NumberFormat.getCurrencyInstance().format(kotlin.math.ceil(tip))
