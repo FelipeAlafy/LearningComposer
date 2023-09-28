@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">WoofApp</string>
+    <string name="koda">Koda</string>
+    <string name="lola">Lola</string>
+    <string name="frankie">Frankie</string>
+    <string name="nox">Nox</string>
+    <string name="faye">Faye</string>
+    <string name="bella">Bella</string>
+    <string name="Moana">Moana</string>
+    <string name="tzeitel">Tzeitel</string>
+    <string name="leroy">Leroy</string>
+    <string name="years_old">years old</string>
+    <string name="woof_logo">Woof Logo</string>
+</resources>
