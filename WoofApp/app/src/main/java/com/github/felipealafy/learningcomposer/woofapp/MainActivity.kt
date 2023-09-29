@@ -6,7 +6,12 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.annotation.StringRes
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -136,6 +141,11 @@ fun WoofTopBar(modifier: Modifier = Modifier) {
 @Composable
 fun WoofCard(dog: Dog) {
     var expanded by remember { mutableStateOf(false) }
+    val color by animateColorAsState(
+        targetValue = if (expanded) MaterialTheme.colorScheme.tertiaryContainer
+        else MaterialTheme.colorScheme.primaryContainer
+    )
+
     Card(modifier = Modifier
         .fillMaxWidth()
         .padding(
@@ -143,7 +153,16 @@ fun WoofCard(dog: Dog) {
             end = dimensionResource(id = R.dimen.padding_small),
             bottom = dimensionResource(id = R.dimen.padding_medium),
         )) {
-        Column {
+
+        Column (
+            modifier = Modifier.animateContentSize (
+                        animationSpec = spring(
+                            dampingRatio = Spring.DampingRatioNoBouncy,
+                            stiffness = Spring.StiffnessMedium
+                        )
+                    )
+                    .background(color = color)
+                ) {
             Row (
                 Modifier.padding(dimensionResource(id = R.dimen.padding_small))
             ) {
