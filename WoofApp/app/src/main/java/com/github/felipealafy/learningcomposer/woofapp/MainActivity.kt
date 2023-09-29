@@ -155,14 +155,14 @@ fun WoofCard(dog: Dog) {
         )) {
 
         Column (
-            modifier = Modifier.animateContentSize (
-                        animationSpec = spring(
-                            dampingRatio = Spring.DampingRatioNoBouncy,
-                            stiffness = Spring.StiffnessMedium
-                        )
+            modifier = Modifier
+                .animateContentSize (
+                    animationSpec = spring(
+                        dampingRatio = Spring.DampingRatioNoBouncy,
+                        stiffness = Spring.StiffnessMedium
                     )
-                    .background(color = color)
-                ) {
+                ).background(color = color)
+        ) {
             Row (
                 Modifier.padding(dimensionResource(id = R.dimen.padding_small))
             ) {
