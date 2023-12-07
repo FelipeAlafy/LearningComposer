@@ -105,10 +105,7 @@ fun SelectOptionScreen(
             horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium)),
             verticalAlignment = Alignment.Bottom
         ){
-            OutlinedButton(
-                modifier = Modifier.weight(1f),
-                onClick = { onCancelButtonClicked }
-            ) {
+            OutlinedButton(modifier = Modifier.weight(1f), onClick = onCancelButtonClicked) {
                 Text(stringResource(R.string.cancel))
             }
             Button(
